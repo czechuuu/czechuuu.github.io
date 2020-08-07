@@ -6,8 +6,8 @@ request.send();
 
 request.onload = function() {
     const jsonData = request.response;
-    alert("onload!")
-    loadingData(jsonData)
+    alert("onload!");
+    loadingData(jsonData);
 }
 
 function loadingData(jsonObj) {
@@ -18,7 +18,7 @@ function loadingData(jsonObj) {
     document.getElementById('piatek').innerHTML = jsonObj['piatek'];
     document.getElementById('sobota').innerHTML = jsonObj['sobota'];
     document.getElementById('niedziela').innerHTML = jsonObj['niedziela'];
-    alert("loading data!")
+    alert("loading data!");
     document.getElementById('poniedzialek').style.backgroundColor = jsonObj['c_poniedzialek'];
     document.getElementById('wtorek').style.backgroundColor = jsonObj['c_wtorek'];
     document.getElementById('sroda').style.backgroundColor = jsonObj['c_sroda'];
