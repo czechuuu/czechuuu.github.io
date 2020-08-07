@@ -1,5 +1,6 @@
 <head>
   <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="scripts.js"></script>
 </head>
 
 <body>
@@ -28,31 +29,31 @@
         <td id="niedziela">-</td>
       </tr>
       <tr>
-        <td><button type="button" class="guzik-bartek" onClick="document.getElementById('poniedzialek').innerHTML = 'Bartek';document.getElementById('poniedzialek').style.backgroundColor = 'paleturquoise';">Bartek</button></td>
-        <td><button type="button" class="guzik-bartek" onClick="document.getElementById('wtorek').innerHTML= 'Bartek';document.getElementById('wtorek').style.backgroundColor= 'paleturquoise';">Bartek</button></td>
-        <td><button type="button" class="guzik-bartek" onClick="document.getElementById('sroda').innerHTML= 'Bartek';document.getElementById('sroda').style.backgroundColor= 'paleturquoise';">Bartek</button></td>
-        <td><button type="button" class="guzik-bartek" onClick="document.getElementById('czwartek').innerHTML= 'Bartek';document.getElementById('czwartek').style.backgroundColor= 'paleturquoise';">Bartek</button></td>
-        <td><button type="button" class="guzik-bartek" onClick="document.getElementById('piatek').innerHTML= 'Bartek';document.getElementById('piatek').style.backgroundColor= 'paleturquoise';">Bartek</button></td>
-        <td><button type="button" class="guzik-bartek" onClick="document.getElementById('sobota').innerHTML= 'Bartek';document.getElementById('sobota').style.backgroundColor= 'paleturquoise';">Bartek</button></td>
-        <td><button type="button" class="guzik-bartek" onClick="document.getElementById('niedziela').innerHTML= 'Bartek';document.getElementById('niedziela').style.backgroundColor= 'paleturquoise';">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('poniedzialek', 'Bartek', 'paleturquoise');">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('wtorek', 'Bartek', 'paleturquoise');">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('sroda', 'Bartek', 'paleturquoise');">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('czwartek', 'Bartek', 'paleturquoise');">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('piatek', 'Bartek', 'paleturquoise');">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('sobota', 'Bartek', 'paleturquoise');">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('niedziela', 'Bartek', 'paleturquoise');">Bartek</button></td>
       </tr>
       <tr>
-        <td><button type="button" class="guzik-kuba" onClick="document.getElementById('poniedzialek').innerHTML= 'Kuba';document.getElementById('poniedzialek').style.backgroundColor = 'lightcoral';">Kuba</button></td>
-        <td><button type="button" class="guzik-kuba" onClick="document.getElementById('wtorek').innerHTML= 'Kuba';document.getElementById('wtorek').style.backgroundColor = 'lightcoral';">Kuba</button></td>
-        <td><button type="button" class="guzik-kuba" onClick="document.getElementById('sroda').innerHTML= 'Kuba';document.getElementById('sroda').style.backgroundColor = 'lightcoral';">Kuba</button></td>
-        <td><button type="button" class="guzik-kuba" onClick="document.getElementById('czwartek').innerHTML= 'Kuba';document.getElementById('czwartek').style.backgroundColor = 'lightcoral';">Kuba</button></td>
-        <td><button type="button" class="guzik-kuba" onClick="document.getElementById('piatek').innerHTML= 'Kuba';document.getElementById('piatek').style.backgroundColor = 'lightcoral';">Kuba</button></td>
-        <td><button type="button" class="guzik-kuba" onClick="document.getElementById('sobota').innerHTML= 'Kuba';document.getElementById('sobota').style.backgroundColor = 'lightcoral';">Kuba</button></td>
-        <td><button type="button" class="guzik-kuba" onClick="document.getElementById('niedziela').innerHTML= 'Kuba';document.getElementById('niedziela').style.backgroundColor = 'lightcoral';">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('poniedzialek', 'Kuba', 'lightcoral');">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('wtorek', 'Kuba', 'lightcoral');">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('sroda', 'Kuba', 'lightcoral');">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('czwartek', 'Kuba', 'lightcoral');">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('piatek', 'Kuba', 'lightcoral');">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('sobota', 'Kuba', 'lightcoral');">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('niedziela', 'Kuba', 'lightcoral');">Kuba</button></td>
       </tr>
       <tr>
-        <td><button type="button" class="guzik-usun" onClick="document.getElementById('poniedzialek').innerHTML= '-';document.getElementById('poniedzialek').style.backgroundColor= 'whitesmoke';">-</button></td>
-        <td><button type="button" class="guzik-usun" onClick="document.getElementById('wtorek').innerHTML= '-';document.getElementById('wtorek').style.backgroundColor= 'whitesmoke';">-</button></td>
-        <td><button type="button" class="guzik-usun" onClick="document.getElementById('sroda').innerHTML= '-';document.getElementById('sroda').style.backgroundColor= 'whitesmoke';">-</button></td>
-        <td><button type="button" class="guzik-usun" onClick="document.getElementById('czwartek').innerHTML= '-';document.getElementById('czwartek').style.backgroundColor= 'whitesmoke';">-</button></td>
-        <td><button type="button" class="guzik-usun" onClick="document.getElementById('piatek').innerHTML= '-';document.getElementById('piatek').style.backgroundColor= 'whitesmoke';">-</button></td>
-        <td><button type="button" class="guzik-usun" onClick="document.getElementById('sobota').innerHTML= '-';document.getElementById('sobota').style.backgroundColor= 'whitesmoke';">-</button></td>
-        <td><button type="button" class="guzik-usun" onClick="document.getElementById('niedziela').innerHTML= '-';document.getElementById('niedziela').style.backgroundColor= 'whitesmoke';">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('poniedzialek', '-', 'whitesmoke');">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('wtorek', '-', 'whitesmoke');">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('sroda', '-', 'whitesmoke');">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('czwartek', '-', 'whitesmoke');">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('piatek', '-', 'whitesmoke');">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('sobota', '-', 'whitesmoke');">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('niedziela', '-', 'whitesmoke');">-</button></td>
       </tr>
     </tbody>
   </table>
