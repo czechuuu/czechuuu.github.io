@@ -1,17 +1,16 @@
 {
-  "poniedzialek": "-"
-  "wtorek": "WTORECZEK"
-  "sroda": "-"
-  "czwartek": "-"
-  "piatek": "-"
-  "sobota": "-"
-  "niedziela": "-"
-
-  "c_poniedzialek": "whitesmoke"
-  "c_wtorek": "whitesmoke"
-  "c_sroda": "black"
-  "c_czwartek": "whitesmoke"
-  "c_piatek": "whitesmoke"
-  "c_sobota": "whitesmoke"
-  "c_niedziela": "whitesmoke"
+  "poniedzialek": "-",
+  "wtorek": "WTORECZEK",
+  "sroda": "-",
+  "czwartek": "-",
+  "piatek": "-",
+  "sobota": "-",
+  "niedziela": "-",
+  "c_poniedzialek": "whitesmoke",
+  "c_wtorek": "whitesmoke",
+  "c_sroda": "black",
+  "c_czwartek": "whitesmoke",
+  "c_piatek": "whitesmoke",
+  "c_sobota": "whitesmoke",
+  "c_niedziela": "whitesmoke",
 }
