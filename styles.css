@@ -1,0 +1,50 @@
+table {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+th {
+  background-color: whitesmoke;
+}
+
+#poniedzialek, #wtorek, #sroda, #czwartek, #piatek, #sobota, #niedziela {
+  height: 50px;
+  background-color: whitesmoke;
+  border-radius: 4px;
+}
+
+.guzik-bartek {
+  background-color: paleturquoise;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  text-align: center;
+  padding: 15px 30px;
+  width: 100%;
+}
+
+.guzik-kuba {
+  background-color: lightcoral;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  text-align: center;
+  padding: 15px 30px;
+  width: 100%;
+}
+
+.guzik-usun {
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  text-align: center;
+  padding: 15px 30px;
+  width: 100%;
+}
