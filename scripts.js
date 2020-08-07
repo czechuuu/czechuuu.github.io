@@ -1,4 +1,4 @@
-let requestURL = 'czechuuu.github.io/data.json';
+let requestURL = 'https://czechuuu.github.io/data.json';
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
