@@ -1,6 +1,8 @@
 <head>
   <link rel="stylesheet" href="styles.css">
   <script type="text/javascript" src="scripts.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
 </head>
 
 <body>
@@ -59,4 +61,125 @@
   </table>
 
 
+  <script type="text/javascript">
+    var firebaseConfig = {
+      apiKey: "AIzaSyCHh6TPeRcsZU2Wknk00pw_bgCWO9wT3rg",
+      authDomain: "ttjc-df441.firebaseapp.com",
+      databaseURL: "https://ttjc-df441.firebaseio.com",
+      projectId: "ttjc-df441",
+      storageBucket: "ttjc-df441.appspot.com",
+      messagingSenderId: "835428887999",
+      appId: "1:835428887999:web:cb16a17dd8a417d60ec50a"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+  </script>
+  <script type="text/javascript">
+    var docRef = db.collection("bread").doc("poniedzialek");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("poniedzialek").innerHTML = userData.elementText;
+        document.getElementById("poniedzialek").style.backgroundColor = userData.elementColor;
+        console.log("loaded data for poniedzialek");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting poniedzialek: ", error);
+    });
+    var docRef = db.collection("bread").doc("wtorek");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("wtorek").innerHTML = userData.elementText;
+        document.getElementById("wtorek").style.backgroundColor = userData.elementColor;
+        console.log("loaded data for wtorek");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting wtorek: ", error);
+    });
+    var docRef = db.collection("bread").doc("sroda");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("sroda").innerHTML = userData.elementText;
+        document.getElementById("sroda").style.backgroundColor = userData.elementColor;
+        console.log("loaded data for sroda");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting sroda:", error);
+    });
+    var docRef = db.collection("bread").doc("czwartek");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("czwartek").innerHTML = userData.elementText;
+        document.getElementById("czwartek").style.backgroundColor = userData.elementColor;
+        console.log("loaded data for czwartek");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting czwartek:", error);
+    });
+    var docRef = db.collection("bread").doc("piatek");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("piatek").innerHTML = userData.elementText;
+        document.getElementById("piatek").style.backgroundColor = userData.elementColor;
+        console.log("loaded data for piatek");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting piatek:", error);
+    });
+    var docRef = db.collection("bread").doc("sobota");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("sobota").innerHTML = userData.elementText;
+        document.getElementById("sobota").style.backgroundColor = userData.elementColor;
+        console.log("loaded data for sobota");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting sobota:", error);
+    });
+    var docRef = db.collection("bread").doc("niedziela");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("niedziela").innerHTML = userData.elementText;
+        document.getElementById("niedziela").style.backgroundColor = userData.elementColor;
+        console.log("loaded data for niedziela");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting niedziela:", error);
+    });
+  </script>
 </body>
