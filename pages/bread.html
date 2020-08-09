@@ -1,0 +1,195 @@
+<head>
+  <link rel="stylesheet" href="../stylesheets/bread.css">
+  <script type="text/javascript" src="../scripts/breadButton.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+</head>
+
+<body>
+  <h2><a href="../index.html" class="guzik-home">HOME</a>Turbo Manager Kupowania Chleba</h2>
+  <br>
+  <br>
+  <table>
+    <thead>
+      <tr id="dni">
+        <th>Poniedzialek</th>
+        <th>Wtorek</th>
+        <th>Sroda</th>
+        <th>Czwartek</th>
+        <th>Piatek</th>
+        <th>Sobota</th>
+        <th>Niedziela</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="osoby">
+        <td id="poniedzialek">-</td>
+        <td id="wtorek">-</td>
+        <td id="sroda">-</td>
+        <td id="czwartek">-</td>
+        <td id="piatek">-</td>
+        <td id="sobota">-</td>
+        <td id="niedziela">-</td>
+      </tr>
+      <tr id="puste">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('poniedzialek', 'Bartek', 'paleturquoise');">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('wtorek', 'Bartek', 'paleturquoise');">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('sroda', 'Bartek', 'paleturquoise');">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('czwartek', 'Bartek', 'paleturquoise');">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('piatek', 'Bartek', 'paleturquoise');">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('sobota', 'Bartek', 'paleturquoise');">Bartek</button></td>
+        <td><button type="button" class="guzik-bartek" onClick="buttonPress('niedziela', 'Bartek', 'paleturquoise');">Bartek</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('poniedzialek', 'Kuba', 'lightcoral');">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('wtorek', 'Kuba', 'lightcoral');">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('sroda', 'Kuba', 'lightcoral');">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('czwartek', 'Kuba', 'lightcoral');">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('piatek', 'Kuba', 'lightcoral');">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('sobota', 'Kuba', 'lightcoral');">Kuba</button></td>
+        <td><button type="button" class="guzik-kuba" onClick="buttonPress('niedziela', 'Kuba', 'lightcoral');">Kuba</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('poniedzialek', '-', 'wheat');">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('wtorek', '-', 'wheat');">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('sroda', '-', 'wheat');">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('czwartek', '-', 'wheat');">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('piatek', '-', 'wheat');">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('sobota', '-', 'wheat');">-</button></td>
+        <td><button type="button" class="guzik-usun" onClick="buttonPress('niedziela', '-', 'wheat');">-</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <script type="text/javascript">
+    var firebaseConfig = {
+      apiKey: "AIzaSyCHh6TPeRcsZU2Wknk00pw_bgCWO9wT3rg",
+      authDomain: "ttjc-df441.firebaseapp.com",
+      databaseURL: "https://ttjc-df441.firebaseio.com",
+      projectId: "ttjc-df441",
+      storageBucket: "ttjc-df441.appspot.com",
+      messagingSenderId: "835428887999",
+      appId: "1:835428887999:web:cb16a17dd8a417d60ec50a"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+  </script>
+  <script type="text/javascript">
+    var docRef = db.collection("bread").doc("poniedzialek");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("poniedzialek").innerHTML = userData.elementText;
+        document.getElementById("poniedzialek").style.backgroundColor = userData.elementColor;
+        //console.log("loaded data for poniedzialek");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting poniedzialek: ", error);
+    });
+    var docRef = db.collection("bread").doc("wtorek");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("wtorek").innerHTML = userData.elementText;
+        document.getElementById("wtorek").style.backgroundColor = userData.elementColor;
+        //console.log("loaded data for wtorek");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting wtorek: ", error);
+    });
+    var docRef = db.collection("bread").doc("sroda");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("sroda").innerHTML = userData.elementText;
+        document.getElementById("sroda").style.backgroundColor = userData.elementColor;
+        //console.log("loaded data for sroda");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting sroda:", error);
+    });
+    var docRef = db.collection("bread").doc("czwartek");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("czwartek").innerHTML = userData.elementText;
+        document.getElementById("czwartek").style.backgroundColor = userData.elementColor;
+        //console.log("loaded data for czwartek");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting czwartek:", error);
+    });
+    var docRef = db.collection("bread").doc("piatek");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("piatek").innerHTML = userData.elementText;
+        document.getElementById("piatek").style.backgroundColor = userData.elementColor;
+        //console.log("loaded data for piatek");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting piatek:", error);
+    });
+    var docRef = db.collection("bread").doc("sobota");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("sobota").innerHTML = userData.elementText;
+        document.getElementById("sobota").style.backgroundColor = userData.elementColor;
+        //console.log("loaded data for sobota");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting sobota:", error);
+    });
+    var docRef = db.collection("bread").doc("niedziela");
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        var userData = doc.data();
+        var decoded = JSON.stringify(userData);
+        document.getElementById("niedziela").innerHTML = userData.elementText;
+        document.getElementById("niedziela").style.backgroundColor = userData.elementColor;
+        //console.log("loaded data for niedziela");
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting niedziela:", error);
+    });
+  </script>
+</body>
