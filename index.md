@@ -6,3 +6,4 @@ layout: home
 ---
 
 # [Lab 1](/about/)
+# [Lab 2](/lab2/site.html)
