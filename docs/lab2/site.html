@@ -1,106 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My "first" HTML page</title>
-  <style>
-  </style>
+  <link href="../../assets/css/output.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1><a href="/">My AWWW site</a></h1>
-    <h1>Some cool information about speedcubing.</h1>
+<body class="bg-gray-900 text-gray-300">
+
+  <header class="bg-indigo-900 text-white p-4 shadow-lg shadow-indigo-900/50">
+    <h1 class="text-3xl font-bold"><a href="/" class="text-emerald-400 hover:text-emerald-300">My AWWW site</a></h1>
+    <h1 class="text-lg text-gray-200">Some cool information about speedcubing.</h1>
   </header>
 
-  <article>
+  <article class="p-6">
     <!-- Table -->
-    <h2>Speedcubing Results</h2>
-    <table>
-      <caption><strong>Tymon Kolasinski's  records for Various Cubes</strong></caption>
-      <tr>
-        <th>Cube Type</th>
-        <th>Single (s)</th>
-        <th>Average (s)</th>
-      </tr>
-      <tr>
-        <td>3x3x3</td>
-        <td>3.66</td>
-        <td>4.67</td>
-      </tr>
-      <tr>
-        <td>2x2x2</td>
-        <td>0.60</td>
-        <td>1.35</td>
-      </tr>
-      <tr>
-        <td>4x4x4</td>
-        <td>16.19</td>
-        <td>19.17</td>
-      </tr>
-      <tr>
-        <td>5x5x5</td>
-        <td>30.45</td>
-        <td>34.79</td>
-      </tr>
+    <h2 class="text-2xl font-semibold text-emerald-500">Speedcubing Results</h2>
+    <table class="table-auto w-full border border-gray-700 shadow-xl shadow-black/50">
+      <caption class="text-lg font-semibold text-gray-400">Tymon Kolasinski's records for Various Cubes</caption>
+      <thead class="bg-gray-800">
+        <tr>
+          <th class="p-2 border border-gray-700">Cube Type</th>
+          <th class="p-2 border border-gray-700">Single (s)</th>
+          <th class="p-2 border border-gray-700">Average (s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-gray-800 hover:bg-gray-700">
+          <td class="p-2 border border-gray-700">3x3x3</td>
+          <td class="p-2 border border-gray-700">3.66</td>
+          <td class="p-2 border border-gray-700">4.67</td>
+        </tr>
+        <tr class="bg-gray-800 hover:bg-gray-700">
+          <td class="p-2 border border-gray-700">2x2x2</td>
+          <td class="p-2 border border-gray-700">0.60</td>
+          <td class="p-2 border border-gray-700">1.35</td>
+        </tr>
+      </tbody>
     </table>
 
-    <!-- Roman numeral list -->
-    <h2>Steps to Improve Speedcubing</h2>
-    <ol type="I">
+    <!-- Steps -->
+    <h2 class="text-2xl font-semibold text-pink-500 mt-6">Steps to Improve Speedcubing</h2>
+    <ol class="list-decimal ml-6 text-gray-300">
       <li><strong>Practice</strong> daily with different cube types.</li>
       <li><em>Analyze</em> your solves using videos.</li>
-      <li>Join <strong>competitions</strong> for real experience.</li>
+      <li>Join <strong class="text-emerald-400">competitions</strong> for real experience.</li>
     </ol>
 
     <!-- Image -->
-    <h2>Speedcubing Inspiration</h2>
-    <img src="https://res.cloudinary.com/teepublic/image/private/s--1zSYhl_s--/c_crop,x_10,y_10/c_fit,h_1109/c_crop,g_north_west,h_1260,w_1260,x_-110,y_-76/co_rgb:000000,e_colorize,u_Misc:One%20Pixel%20Gray/c_scale,g_north_west,h_1260,w_1260/fl_layer_apply,g_north_west,x_-110,y_-76/bo_0px_solid_white/t_Resized%20Artwork/c_fit,g_north_west,h_1054,w_1054/co_ffffff,e_outline:53/co_ffffff,e_outline:inner_fill:53/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/t_watermark_lock/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1610840159/production/designs/18568890_0.jpg" alt="Speedcubing" width="300">
-
+    <h2 class="text-2xl font-semibold text-amber-500 mt-6">Speedcubing Inspiration</h2>
+    <div class="flex justify-center rounded-md">
+      <img src="https://res.cloudinary.com/teepublic/image/private/s--1zSYhl_s--/c_crop,x_10,y_10/c_fit,h_1109/c_crop,g_north_west,h_1260,w_1260,x_-110,y_-76/co_rgb:000000,e_colorize,u_Misc:One%20Pixel%20Gray/c_scale,g_north_west,h_1260,w_1260/fl_layer_apply,g_north_west,x_-110,y_-76/bo_0px_solid_white/t_Resized%20Artwork/c_fit,g_north_west,h_1054,w_1054/co_ffffff,e_outline:53/co_ffffff,e_outline:inner_fill:53/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/t_watermark_lock/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1610840159/production/designs/18568890_0.jpg" 
+      alt="Speedcubing" width="300" class="shadow-lg shadow-black rounded-lg border border-gray-700">
+    </div>
+    
     <!-- Form -->
-    <h2>Share Your Best Time</h2>
-    <form>
-      <label for="cube">Cube Type:</label>
-      <select id="cube">
-        <optgroup label="Standard Cubes">
+    <h2 class="text-2xl font-semibold text-indigo-400 mt-6">Share Your Best Time</h2>
+    <form class="p-4 border border-gray-700 rounded-md bg-gray-800 shadow-md">
+      <label for="cube" class="block text-gray-300 font-semibold">Cube Type:</label>
+      <select id="cube" class="block w-full p-2 border border-gray-600 rounded bg-gray-900 text-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        <optgroup label="Standard Cubes" class="bg-gray-900 text-gray-200">
           <option>3x3x3</option>
           <option>2x2x2</option>
         </optgroup>
-        <optgroup label="Big Cubes">
+        <optgroup label="Big Cubes" class="bg-gray-900 text-gray-200">
           <option>4x4x4</option>
           <option>5x5x5</option>
         </optgroup>
-      </select><br><br>
-      <label for="time">Best Time (s):</label>
-      <input type="text" id="time"><br><br>
-      <button type="submit">Submit</button>
+      </select><br>
+      <label for="time" class="block text-gray-300 font-semibold mt-2">Best Time (s):</label>
+      <input type="text" id="time" class="block w-full p-2 border border-gray-600 rounded bg-gray-900 text-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"><br>
+      <button type="submit" class="mt-3 bg-emerald-700 text-white py-2 px-4 rounded-lg shadow-inner shadow-emerald-900/50 hover:bg-emerald-600 transition duration-200 ease-in-out relative">
+        Submit
+        <!-- Ping circle animation -->
+        <span class="absolute -top-1 -right-1 flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
+        </span>
+      </button>
     </form>
 
     <!-- Expandable -->
-    <details>
-      <summary>More About Speedcubing</summary>
-      <p>Speedcubing is the practice of solving Rubik’s cubes and similar puzzles as quickly as possible. The most common cube is the 3x3x3.</p>
+    <details class="mt-6">
+      <summary class="text-lg font-semibold text-gray-300 cursor-pointer">More About Speedcubing</summary>
+      <p class="text-gray-400 p-2 bg-gray-800 rounded mt-1">Speedcubing is the practice of solving Rubik's cubes and similar puzzles as quickly as possible.</p>
+      <p class="text-gray-400 p-2 bg-gray-800 rounded mt-1">
+        For official competitions and rankings, visit the 
+        <a href="https://www.worldcubeassociation.org/" class="text-emerald-400 hover:text-emerald-300 underline decoration-dotted" target="_blank" rel="noopener noreferrer">World Cube Association</a>.
+      </p>
     </details>
 
     <!-- Progress bar -->
-    <h2>Progress Towards Personal Best</h2>
-    <progress value="80" max="100"></progress>
-
-    <!-- Map -->
-    <h2>Competitions Around the World</h2>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZO3BOsppQCuAJq7nAaWcFtFlxa-gy5QB7Cw&s" alt="World Map" usemap="#competitionMap" width="600">
-    <map name="competitionMap">
-      <area shape="rect" coords="100,50,200,100" alt="North America" href="https://www.google.com/search?q=speedcubing+competitions+in+North+America" title="North America">
-      <area shape="rect" coords="150,150,300,200" alt="South America" href="https://www.google.com/search?q=speedcubing+competitions+in+South+America" title="South America">
-      <area shape="circle" coords="300,50,40" alt="Europe" href="https://www.google.com/search?q=speedcubing+competitions+in+Europe" title="Europe">
-      <area shape="circle" coords="500,50,100" alt="Asia" href="https://www.google.com/search?q=speedcubing+competitions+in+Asia" title="Asia">
-      <area shape="circle" coords="300,150,60" alt="Africa" href="https://www.google.com/search?q=speedcubing+competitions+in+Africa" title="Africa">
-      <area shape="circle" coords="500,150,50" alt="Australia" href="https://www.google.com/search?q=speedcubing+competitions+in+Australia" title="Australia">
-      <area shape="rect" coords="50,250,150,300" alt="Antarctica" href="https://www.google.com/search?q=speedcubing+competitions+in+Antarctica" title="Antarctica">
-    </map>
-
+    <h2 class="text-2xl font-semibold text-amber-500 mt-6">Progress Towards Personal Best</h2>
+    <progress value="80" max="100" class="w-full h-3 bg-gray-700"></progress>
+    
+    <!-- Flexbox Demonstrations -->
+    <h2 class="text-2xl font-semibold text-indigo-400 mt-8">Speedcubing Resources</h2>
+    
+    <!-- flex-row demonstration -->
+    <div class="mt-4">
+      <h3 class="text-lg text-pink-500 mb-2">Popular Cube Brands</h3>
+      <div class="flex flex-row gap-3 overflow-x-auto pb-2">
+        <div class="p-3 bg-gray-800 rounded-md border border-gray-700  w-48">
+          <h4 class="font-bold text-emerald-400">GAN</h4>
+          <p class="text-sm text-gray-400">Premium cubes with innovative designs and magnetic systems.</p>
+        </div>
+        <div class="p-3 bg-gray-800 rounded-md border border-gray-700  w-48">
+          <h4 class="font-bold text-emerald-400">MoYu</h4>
+          <p class="text-sm text-gray-400">Well-known for WeiLong series and budget-friendly options.</p>
+        </div>
+        <div class="p-3 bg-gray-800 rounded-md border border-gray-700 w-48">
+          <h4 class="font-bold text-emerald-400">QiYi</h4>
+          <p class="text-sm text-gray-400">Makers of the popular Thunderclap series and magnetic puzzles.</p>
+        </div>
+        <div class="p-3 bg-gray-800 rounded-md border border-gray-700 w-48">
+          <h4 class="font-bold text-emerald-400">DaYan</h4>
+          <p class="text-sm text-gray-400">Historic brand famous for the ZhanChi that revolutionized cubing.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- flex-col demonstration -->
+    <div class="mt-6">
+      <h3 class="text-lg text-pink-500 mb-2">Solving Methods</h3>
+      <div class="flex flex-col gap-2">
+        <div class="p-3 bg-gray-800 rounded-md border border-gray-700">
+          <h4 class="font-bold text-emerald-400">CFOP</h4>
+          <p class="text-sm text-gray-400">The most popular method: Cross, F2L, OLL, PLL. Used by most champions.</p>
+        </div>
+        <div class="p-3 bg-gray-800 rounded-md border border-gray-700">
+          <h4 class="font-bold text-emerald-400">Roux</h4>
+          <p class="text-sm text-gray-400">Block-building approach with fewer moves and more intuitive solving.</p>
+        </div>
+        <div class="p-3 bg-gray-800 rounded-md border border-gray-700">
+          <h4 class="font-bold text-emerald-400">ZZ</h4>
+          <p class="text-sm text-gray-400">Focuses on edge orientation early for efficient rotationless solving.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- flex-auto demonstration -->
+    <div class="mt-6">
+      <h3 class="text-lg text-pink-500 mb-2">Competition Categories</h3>
+      <div class="flex gap-3">
+        <div class="p-3 bg-gray-800 rounded-md border border-gray-700 flex-auto">
+          <h4 class="font-bold text-emerald-400">Speed Events</h4>
+          <p class="text-sm text-gray-400">Standard timed solves with 2x2, 3x3, 4x4, 5x5, and other cubes.</p>
+        </div>
+        <div class="p-3 bg-gray-800 rounded-md border border-gray-700 flex-auto">
+          <h4 class="font-bold text-emerald-400">Special Events</h4>
+          <p class="text-sm text-gray-400">One-handed, blindfolded, multi-blind, and fewest moves challenges.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- flex-none and flex comparison -->
+    <div class="mt-6">
+      <h3 class="text-lg text-pink-500 mb-2">Practice Schedule</h3>
+      <div class="flex gap-3">
+        <div class="p-3 bg-gray-800 rounded-md border border-gray-700 flex-none w-64">
+          <h4 class="font-bold text-emerald-400">Beginner</h4>
+          <p class="text-sm text-gray-400">Practice 20 minutes daily focusing on basic algorithms and finger tricks.</p>
+        </div>
+        <div class="p-3 bg-gray-800 rounded-md border border-gray-700 flex flex-auto">
+          <h4 class="font-bold text-emerald-400">Intermediate </h4>
+          <p class="text-sm text-gray-400">Practice 1 hour daily with algorithm drills, timed solves, and slow solving for lookhead practice.</p>
+        </div>
+      </div>
+    </div>
   </article>
 
-  <footer>
+  <footer class="text-center p-4 bg-black text-gray-400 mt-6">
     <p>&copy; 2025 by Bartosz Czechowski</p>
   </footer>
+
 </body>
 </html>
